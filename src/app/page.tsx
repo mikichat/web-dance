@@ -31,48 +31,48 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
         {/* Background Overlay */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545959570-a941cc57f4c9?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545959570-a941cc57f4c9?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center bg-fixed">
           <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
-          <span className="inline-block py-1 px-3 rounded-full bg-pink-500/20 border border-pink-500/50 text-pink-400 text-sm font-bold tracking-wider mb-6 animate-fade-in-up">
+        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto mt-0 md:mt-[-5vh]">
+          <span className="inline-block py-2 px-4 rounded-full bg-pink-500/20 border border-pink-500/50 text-pink-400 text-sm md:text-base font-bold tracking-widest mb-8 animate-fade-in-up">
             WELCOME TO THE STAGE
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 leading-none tracking-tighter">
             MOVE YOUR BODY <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient">
               FEEL THE BEAT
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
             K-POP, 힙합, 재즈, 코레오까지. <br className="hidden md:block"/>
-            당신의 열정을 표현할 수 있는 최고의 공간, 리듬 댄스 스튜디오에서 시작하세요.
+            당신의 열정을 표현할 수 있는 최고의 공간, <span className="text-white font-bold">리듬 댄스 스튜디오</span>에서 시작하세요.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto px-8 py-4 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-pink-600/30 flex items-center justify-center gap-2">
-              수강 상담 예약 <ArrowRight size={20} />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <button className="w-full sm:w-auto px-10 py-5 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-xl shadow-pink-600/30 flex items-center justify-center gap-3 group">
+              수강 상담 예약 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/30 hover:bg-white/10 text-white rounded-full font-bold text-lg transition-all backdrop-blur-sm">
+            <button className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-white/30 hover:bg-white/10 text-white rounded-full font-bold text-xl transition-all backdrop-blur-sm hover:border-white">
               시간표 확인하기
             </button>
           </div>
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
-          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-gray-500 rounded-full animate-scroll"></div>
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hidden md:block">
+          <div className="w-8 h-12 border-2 border-gray-500 rounded-full flex justify-center p-2">
+            <div className="w-1.5 h-3 bg-gray-500 rounded-full animate-scroll"></div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <div className="border-y border-white/10 bg-black relative z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="border-y border-white/10 bg-zinc-950 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             {[
               { number: "10+", label: "Professional Instructors" },
               { number: "500+", label: "Active Members" },
