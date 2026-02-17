@@ -1,117 +1,107 @@
 
 import React from 'react';
-import { ArrowRight, Music, Users, Calendar, Star, MapPin, Phone, Instagram } from 'lucide-react';
+import { ArrowRight, Music, Calendar, Zap, Play, Instagram, Youtube } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-pink-500 selection:text-white">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#DEFF00] selection:text-black">
       {/* Navbar */}
-      <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Music size={16} className="text-white" />
+            <div className="flex items-center gap-2 group cursor-pointer">
+              <div className="w-10 h-10 bg-[#DEFF00] rounded-full flex items-center justify-center group-hover:rotate-180 transition-transform duration-500">
+                <Zap size={20} className="text-black fill-black" />
               </div>
-              <span className="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-                RHYTHM DANCE
+              <span className="text-2xl font-black italic tracking-tighter text-white group-hover:text-[#DEFF00] transition-colors">
+                BEAT<span className="text-[#DEFF00]">BOX</span>
               </span>
             </div>
-            <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
-              <a href="#classes" className="hover:text-pink-500 transition-colors">CLASSES</a>
-              <a href="#instructors" className="hover:text-pink-500 transition-colors">INSTRUCTORS</a>
-              <a href="#schedule" className="hover:text-pink-500 transition-colors">SCHEDULE</a>
-              <a href="#contact" className="hover:text-pink-500 transition-colors">CONTACT</a>
+            <div className="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest text-gray-400">
+              <a href="#classes" className="hover:text-white transition-colors">Classes</a>
+              <a href="#instructors" className="hover:text-white transition-colors">Crew</a>
+              <a href="#schedule" className="hover:text-white transition-colors">Timetable</a>
+              <a href="#contact" className="hover:text-white transition-colors">Contact</a>
             </div>
-            <button className="hidden md:block bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition-colors">
-              무료 체험 신청
+            <button className="hidden md:block bg-white hover:bg-[#DEFF00] text-black px-8 py-3 rounded-full font-black text-xs uppercase tracking-widest transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(222,255,0,0.5)]">
+              Free Trial
             </button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
-        {/* Background Overlay */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545959570-a941cc57f4c9?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center bg-fixed">
-          <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video Placeholder */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-60"></div>
         </div>
         
-        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto mt-0 md:mt-[-5vh]">
-          <span className="inline-block py-2 px-4 rounded-full bg-pink-500/20 border border-pink-500/50 text-pink-400 text-sm md:text-base font-bold tracking-widest mb-8 animate-fade-in-up">
-            WELCOME TO THE STAGE
-          </span>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 leading-none tracking-tighter">
-            MOVE YOUR BODY <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient">
-              FEEL THE BEAT
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="inline-block border border-[#DEFF00] text-[#DEFF00] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 animate-pulse">
+            Seoul's Premier Dance Studio
+          </div>
+          <h1 className="text-7xl md:text-[10rem] font-black leading-[0.9] tracking-tighter mb-8 mix-blend-difference text-white">
+            FIND YOUR <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#DEFF00] via-white to-[#00FFFF] italic pr-4">
+              RHYTHM
             </span>
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
-            K-POP, 힙합, 재즈, 코레오까지. <br className="hidden md:block"/>
-            당신의 열정을 표현할 수 있는 최고의 공간, <span className="text-white font-bold">리듬 댄스 스튜디오</span>에서 시작하세요.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12 font-light">
+            K-POP부터 스트릿 댄스까지. <br/>
+            최고의 강사진과 함께 당신만의 스타일을 완성하세요.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="w-full sm:w-auto px-10 py-5 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-xl shadow-pink-600/30 flex items-center justify-center gap-3 group">
-              수강 상담 예약 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <button className="bg-[#DEFF00] text-black px-10 py-4 rounded-full font-black text-lg hover:bg-white transition-colors flex items-center justify-center gap-2">
+              수강 상담 예약 <ArrowRight size={20} />
             </button>
-            <button className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-white/30 hover:bg-white/10 text-white rounded-full font-bold text-xl transition-all backdrop-blur-sm hover:border-white">
+            <button className="border border-white/30 hover:bg-white/10 text-white px-10 py-4 rounded-full font-bold text-lg backdrop-blur-md transition-all">
               시간표 확인하기
             </button>
           </div>
         </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hidden md:block">
-          <div className="w-8 h-12 border-2 border-gray-500 rounded-full flex justify-center p-2">
-            <div className="w-1.5 h-3 bg-gray-500 rounded-full animate-scroll"></div>
+
+        {/* Marquee Text */}
+        <div className="absolute bottom-0 w-full overflow-hidden whitespace-nowrap py-4 bg-[#DEFF00] text-black border-y border-black">
+          <div className="animate-marquee inline-block text-2xl font-black italic tracking-widest">
+            HIPHOP • K-POP • CHOREOGRAPHY • POPPING • LOCKING • WAACKING • HOUSE • VOGUING • HIPHOP • K-POP • CHOREOGRAPHY •
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <div className="border-y border-white/10 bg-zinc-950 relative z-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            {[
-              { number: "10+", label: "Professional Instructors" },
-              { number: "500+", label: "Active Members" },
-              { number: "50+", label: "Weekly Classes" },
-              { number: "4.9", label: "Average Rating" },
-            ].map((stat, i) => (
-              <div key={i} className="group">
-                <div className="text-4xl md:text-5xl font-black text-white mb-2 group-hover:text-pink-500 transition-colors duration-300">{stat.number}</div>
-                <div className="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Classes Grid - Diagonal Style */}
+      <section id="classes" className="py-32 bg-zinc-950 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#DEFF00]/10 blur-[100px] rounded-full"></div>
 
-      {/* Classes Section */}
-      <section id="classes" className="py-24 bg-zinc-900 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">OUR CLASSES</h2>
-            <p className="text-gray-400">초보자부터 전문가 과정까지 다양한 레벨의 수업이 준비되어 있습니다.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex justify-between items-end mb-20">
+            <h2 className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Classes</span>
+            </h2>
+            <p className="hidden md:block text-gray-400 max-w-xs text-right text-sm">
+              초보자부터 전문가 과정까지<br/>체계적인 커리큘럼을 제공합니다.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "K-POP COVER", desc: "최신 아이돌 안무를 가장 빠르게 마스터하는 클래스", img: "https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070&auto=format&fit=crop", color: "from-pink-500 to-rose-500" },
-              { title: "HIPHOP BASIC", desc: "그루브와 리듬감을 익히는 힙합 기초 완성 클래스", img: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?q=80&w=2070&auto=format&fit=crop", color: "from-purple-500 to-indigo-500" },
-              { title: "CHOREOGRAPHY", desc: "트렌디한 음악에 맞춘 강사님만의 창작 안무 클래스", img: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=2070&auto=format&fit=crop", color: "from-cyan-500 to-blue-500" },
-              { title: "GIRLS HIPHOP", desc: "파워풀하면서도 섹시한 라인을 살리는 걸스힙합", img: "https://images.unsplash.com/photo-1552560229-edf05c4856a9?q=80&w=2076&auto=format&fit=crop", color: "from-red-500 to-orange-500" },
-              { title: "KIDS DANCE", desc: "아이들의 성장판 자극과 자신감을 키워주는 키즈댄스", img: "https://images.unsplash.com/photo-1518834107812-67b0b7c58434?q=80&w=2021&auto=format&fit=crop", color: "from-yellow-400 to-orange-400" },
-              { title: "PRIVATE LESSON", desc: "오디션, 입시, 장기자랑 등 목적에 맞춘 1:1 집중 레슨", img: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=2070&auto=format&fit=crop", color: "from-green-400 to-emerald-600" },
-            ].map((cls, idx) => (
-              <div key={idx} className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer">
-                <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{ backgroundImage: `url(${cls.img})` }}></div>
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
-                <div className={`absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent`}>
-                  <div className={`w-12 h-1 mb-4 bg-gradient-to-r ${cls.color}`}></div>
-                  <h3 className="text-2xl font-bold mb-2">{cls.title}</h3>
-                  <p className="text-gray-300 text-sm">{cls.desc}</p>
+              { title: "K-POP", sub: "Cover Dance", img: "https://images.unsplash.com/photo-1621976498727-9e5d26388904?q=80&w=2070&auto=format&fit=crop" },
+              { title: "HIPHOP", sub: "Street Basic", img: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?q=80&w=2070&auto=format&fit=crop" },
+              { title: "CHOREO", sub: "Original Style", img: "https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=1974&auto=format&fit=crop" },
+            ].map((item, idx) => (
+              <div key={idx} className="group relative h-[500px] bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden hover:border-[#DEFF00]/50 transition-all duration-500">
+                <div className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" style={{backgroundImage: `url(${item.img})`}}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+                <div className="absolute bottom-0 left-0 w-full p-8">
+                  <div className="text-[#DEFF00] text-sm font-bold tracking-widest mb-2 uppercase translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                    {item.sub}
+                  </div>
+                  <h3 className="text-5xl font-black italic tracking-tighter text-white group-hover:text-white transition-colors">
+                    {item.title}
+                  </h3>
+                  <div className="w-full h-[1px] bg-white/30 mt-6 group-hover:bg-[#DEFF00] transition-colors"></div>
                 </div>
               </div>
             ))}
@@ -119,84 +109,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Schedule Teaser */}
-      <section id="schedule" className="py-24 bg-black text-center px-4">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-zinc-900 to-zinc-900 border border-zinc-800 p-12 rounded-3xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-pink-600/20 blur-[100px] rounded-full pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full pointer-events-none"></div>
-          
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">이번 달 수업 시간표</h2>
-          <p className="text-gray-400 mb-8 max-w-lg mx-auto relative z-10">
-            매월 업데이트되는 다양한 클래스 스케줄을 확인하세요. <br/>
-            원하는 시간, 원하는 장르를 선택해 수강하실 수 있습니다.
-          </p>
-          <button className="bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors relative z-10 flex items-center gap-2 mx-auto">
-            <Calendar className="w-5 h-5" />
-            시간표 다운로드
-          </button>
+      {/* Video Banner */}
+      <section className="py-20 bg-[#DEFF00] text-black">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10">
+          <div>
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none mb-4">
+              Join the <br/> Revolution
+            </h2>
+            <p className="font-bold text-lg opacity-80">
+              망설이지 말고 시작하세요. <br/>
+              첫 방문 시 1회 무료 체험권 증정!
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <button className="w-20 h-20 bg-black rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">
+              <Play fill="white" className="ml-1" />
+            </button>
+            <div className="h-20 flex items-center">
+              <span className="text-xl font-bold tracking-tighter underline">WATCH PROMO VIDEO</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Call to Action & Footer */}
-      <footer id="contact" className="bg-zinc-950 pt-20 pb-10 border-t border-white/10">
+      {/* Footer */}
+      <footer className="bg-black pt-20 pb-10 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center">
-                  <Music size={16} className="text-white" />
-                </div>
-                <span className="text-xl font-bold">RHYTHM DANCE</span>
+                <div className="w-8 h-8 bg-[#DEFF00] rounded-full"></div>
+                <span className="text-2xl font-black italic text-white">BEATBOX</span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                춤을 통해 삶의 에너지를 충전하는 공간. <br/>
-                누구나 쉽고 즐겁게 춤을 배울 수 있도록 <br/>
-                최고의 강사진이 함께합니다.
+              <p className="text-gray-500 max-w-xs text-sm">
+                춤을 통해 삶의 에너지를 충전하는 공간.
+                누구나 쉽고 즐겁게 춤을 배울 수 있습니다.
               </p>
             </div>
-            
-            <div>
-              <h4 className="text-white font-bold mb-6">CONTACT US</h4>
-              <ul className="space-y-4 text-gray-400 text-sm">
-                <li className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-pink-500 shrink-0" />
-                  <span>서울시 강남구 테헤란로 123 <br/>리듬빌딩 3층</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-pink-500 shrink-0" />
-                  <span>02-1234-5678</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Instagram className="w-5 h-5 text-pink-500 shrink-0" />
-                  <span>@rhythm_dance_official</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-white font-bold mb-6">QUICK LINKS</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-pink-500 transition-colors">학원 소개</a></li>
-                <li><a href="#" className="hover:text-pink-500 transition-colors">강사진 프로필</a></li>
-                <li><a href="#" className="hover:text-pink-500 transition-colors">수강료 안내</a></li>
-                <li><a href="#" className="hover:text-pink-500 transition-colors">오시는 길</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-bold mb-6">NEWSLETTER</h4>
-              <p className="text-gray-400 text-sm mb-4">새로운 수업 소식을 받아보세요.</p>
-              <div className="flex gap-2">
-                <input type="email" placeholder="Email Address" className="bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-pink-500 text-white" />
-                <button className="bg-pink-600 hover:bg-pink-700 text-white p-2 rounded-lg transition-colors">
-                  <ArrowRight size={18} />
-                </button>
-              </div>
+            <div className="flex gap-6">
+              <a href="#" className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-red-600 hover:border-red-600 hover:text-white transition-colors">
+                <Youtube size={20} />
+              </a>
             </div>
           </div>
-          
-          <div className="border-t border-white/5 pt-8 text-center text-gray-600 text-xs">
-            <p>&copy; 2024 RHYTHM DANCE STUDIO. All rights reserved.</p>
+          <div className="mt-20 pt-8 border-t border-white/10 text-center text-gray-600 text-xs">
+            &copy; 2024 BEATBOX DANCE STUDIO. All rights reserved.
           </div>
         </div>
       </footer>
